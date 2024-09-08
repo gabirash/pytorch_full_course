@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
+import torch.nn.functional as F  # For leaky_relu for example...
 
 
 # Option 1 (create nn modules)
@@ -31,4 +31,3 @@ class NeuralNet2(nn.Module):
         out = torch.relu(self.linear1(x))
         out = torch.sigmoid(self.linear2(out))
         return out
-    
